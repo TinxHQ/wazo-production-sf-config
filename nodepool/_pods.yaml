@@ -1,0 +1,12 @@
+# This file is managed by sfconfig, do not edit manually
+---
+labels:
+  - name: pod-centos-7
+
+extra-labels:
+  - provider: managed-k1s-provider-i-0cf3c530711bfb863
+    pool: main
+    labels:
+      - name: pod-centos-7
+        image: localhost/k1s/centos-7
+        python-path: /bin/python2

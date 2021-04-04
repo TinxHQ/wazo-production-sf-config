@@ -1,0 +1,34 @@
+# This file is managed by ansible, do not edit directly
+---
+resources:
+  tenants:
+    local:
+      description: "The local tenant."
+      url: "https://sf.production.wazo.cloud/manage"
+      default-connection: github.com
+      tenant-options:
+        zuul/report-build-page: True
+        zuul/max-job-timeout: 10800
+
+  connections:
+    github.com:
+      base-url: "https://github.com"
+      type: github
+      github-app-name: wazo-production-sf
+      github-label: mergeit
+    opendev.org:
+      base-url: "https://opendev.org"
+      type: git
+
+  projects:
+    internal:
+      tenant: local
+      description: Internal configuration project
+      source-repositories:
+        - wazo-platform/sf-config-production:
+            zuul/config-project: True
+        - wazo-platform/sf-jobs-production
+        - zuul/zuul-jobs:
+            connection: opendev.org
+            zuul/include: [job]
+            zuul/shadow: wazo-platform/sf-jobs-production

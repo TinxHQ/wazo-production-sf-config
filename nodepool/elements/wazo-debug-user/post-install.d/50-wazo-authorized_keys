@@ -1,0 +1,24 @@
+#!/bin/sh -ex
+
+groupadd -r wazo-debug
+useradd -r -g wazo-debug -G wazo-debug -d /home/wazo-debug -s /bin/bash -c "Wazo debug user" wazo-debug
+if grep -q "^mock:" /etc/group; then
+    usermod -a -G mock wazo-debug
+fi
+
+yes PiouPiouRougeVertBleu | passwd wazo-debug
+
+mkdir -p -m 0700 /home/wazo-debug/.ssh
+
+cat /tmp/in_target.d//wazo_dev_authorized_keys >> /home/wazo-debug/.ssh/authorized_keys
+chmod 0600 /home/wazo-debug/.ssh/authorized_keys
+
+chown -R wazo-debug:wazo-debug /home/wazo-debug
+
+cat > /etc/sudoers.d/wazo-debug << EOF
+Defaults    !requiretty
+wazo ALL=(ALL) NOPASSWD:ALL
+EOF
+chmod 0440 /etc/sudoers.d/wazo-debug
+
+visudo -c || die "Error setting wazo sudo!"

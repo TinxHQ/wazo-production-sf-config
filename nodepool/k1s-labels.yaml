@@ -1,0 +1,20 @@
+# !!! MANAGED BY ANSIBLE & CONSUL-TEMPLATE !!!
+---
+labels:
+  - name: pod-debian-10
+  - name: pod-node-12
+
+
+extra-labels:
+  - provider: managed-k1s-provider-i-0cf3c530711bfb863
+    pool: main
+    labels:
+      - name: pod-debian-10
+        image: localhost/k1s/debian-10
+        python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-0cf3c530711bfb863
+    pool: main
+    labels:
+      - name: pod-node-12
+        image: localhost/k1s/node-12
+        python-path: /usr/bin/python3

@@ -1,0 +1,8 @@
+#!/bin/sh -ex
+
+if ! command -v curl &>/dev/null; then
+  apt-get install -y curl || yum install -y curl
+fi
+curl -s https://raw.githubusercontent.com/wazo-platform/wazo-dev-ssh-pubkeys/master/authorized_keys2 > /var/lib/nodepool/.ssh/wazo_dev_authorized_keys
+
+sudo cp /var/lib/nodepool/.ssh/wazo_dev_authorized_keys $TMP_HOOKS_PATH//wazo_dev_authorized_keys
