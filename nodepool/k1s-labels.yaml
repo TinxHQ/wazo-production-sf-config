@@ -6,15 +6,17 @@ labels:
 
 
 extra-labels:
-  - provider: managed-k1s-provider-i-0cf3c530711bfb863
+  - provider: managed-k1s-provider-i-0a64c958d683dfa20
     pool: main
     labels:
       - name: pod-debian-10
         image: localhost/k1s/debian-10
         python-path: /usr/bin/python3
-  - provider: managed-k1s-provider-i-0cf3c530711bfb863
+  - provider: managed-k1s-provider-i-0a64c958d683dfa20
     pool: main
     labels:
       - name: pod-node-12
         image: localhost/k1s/node-12
         python-path: /usr/bin/python3
+  
+
