@@ -37,3 +37,4 @@
         zuul_log_compress: true
         zuul_log_url: "https://sf.production.wazo.cloud/logs"
         zuul_logserver_root: "{{ site_sflogs.path }}"
+

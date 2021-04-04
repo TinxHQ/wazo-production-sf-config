@@ -25,10 +25,10 @@ resources:
       tenant: local
       description: Internal configuration project
       source-repositories:
-        - wazo-platform/sf-config-production:
+        - TinxHQ/wazo-production-sf-config:
             zuul/config-project: True
-        - wazo-platform/sf-jobs-production
+        - TinxHQ/wazo-production-sf-jobs
         - zuul/zuul-jobs:
             connection: opendev.org
             zuul/include: [job]
-            zuul/shadow: wazo-platform/sf-jobs-production
+            zuul/shadow: TinxHQ/wazo-production-sf-jobs
