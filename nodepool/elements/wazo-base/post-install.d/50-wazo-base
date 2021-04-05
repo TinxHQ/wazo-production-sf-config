@@ -1,0 +1,5 @@
+#!/bin/sh -ex
+
+apt-get update
+
+apt-get install -y curl jq make

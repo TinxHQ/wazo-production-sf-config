@@ -11,12 +11,13 @@ diskimages:
       # Those live in /usr/share/sf-elements
       - nodepool-minimal
       - zuul-worker-user
+      - wazo-base
       - wazo-debug-user
       - wazo-docker
 
 labels:
   - name: vm-debian-10-m1s
-    min-ready: 1
+    min-ready: 2
   - name: vm-debian-10-m2s
     min-ready: 0
 
