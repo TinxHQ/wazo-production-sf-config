@@ -27,6 +27,16 @@ resources:
       source-repositories:
         - wazo-platform/wazo-provd-plugins:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-c4:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-c4-carrier:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-c4-helm:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-c4-router:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-c4-sbc:
+            zuul/exclude-unprotected-branches: true
         #     - wazo-platform/ari-py:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/asterisk:
@@ -126,16 +136,6 @@ resources:
         #     - wazo-platform/wazo-auth-example-backend:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/wazo-auth-keys:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/wazo-c4:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/wazo-c4-carrier:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/wazo-c4-helm:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/wazo-c4-router:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/wazo-c4-sbc:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/wazo-call-logd:
         #         zuul/exclude-unprotected-branches: true
