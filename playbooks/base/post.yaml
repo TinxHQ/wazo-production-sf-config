@@ -24,7 +24,7 @@
       # This depends-on https://review.openstack.org/577675
       ara_report_run: True
       ara_report_type: database
-      ara_report_path: {{ zuul.executor.log_root }}/ara-report
+      ara_report_path: "{{ zuul.executor.log_root }}/ara-report"
 
 - hosts: "{{ site_sflogs.fqdn }}"
   gather_facts: false
