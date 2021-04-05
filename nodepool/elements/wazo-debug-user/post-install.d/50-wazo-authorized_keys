@@ -8,7 +8,8 @@ fi
 
 yes PiouPiouRougeVertBleu | passwd wazo-debug
 
-mkdir -p -m 0700 /home/wazo-debug/.ssh
+mkdir -p /home/wazo-debug/.ssh
+chmod 0700 /home/wazo-debug/.ssh
 
 cat /tmp/in_target.d//wazo_dev_authorized_keys >> /home/wazo-debug/.ssh/authorized_keys
 chmod 0600 /home/wazo-debug/.ssh/authorized_keys
