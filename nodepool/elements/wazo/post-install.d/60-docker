@@ -25,3 +25,7 @@ systemctl start docker
 # No docker service running in chroot
 # docker version
 # docker-compose version
+
+# Script must run after zuul-worker & wazo-debug users creation, hence named 60-
+usermod -a -G docker wazo-debug
+usermod -a -G docker zuul-worker
