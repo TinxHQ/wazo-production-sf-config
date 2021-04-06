@@ -1,4 +1,6 @@
-# Wazo debug user
+# Wazo base
+
+Install Wazo basic requirements, plus docker.
 
 Add a `wazo-debug` user
 
