@@ -25,12 +25,13 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
-        - wazo-platform/asterisk:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-acceptance:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-ansible:
-            zuul/exclude-unprotected-branches: true
+        # Done & some commented out to avoit Zuuls fighting over those
+        # - wazo-platform/asterisk:
+        #     zuul/exclude-unprotected-branches: true
+        # - wazo-platform/wazo-acceptance:
+        #     zuul/exclude-unprotected-branches: true
+        # - wazo-platform/wazo-ansible:
+        #     zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-carrier:
@@ -43,8 +44,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-plugins:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-ci:
-            zuul/exclude-unprotected-branches: true
+        # - wazo-platform/xivo-ci:
+        #     zuul/exclude-unprotected-branches: true
+
+        # To migrate
         #     - wazo-platform/asterisk-debug:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/asterisk-lab:
