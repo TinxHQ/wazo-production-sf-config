@@ -20,11 +20,12 @@ apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 
 systemctl enable docker
-systemctl start docker
 
-# No docker service running in chroot
+# No service running in chroot
+# systemctl start docker
 # docker version
-# docker-compose version
+
+docker-compose version
 
 # Script must run after zuul-worker & wazo-debug users creation, hence named 60-
 usermod -a -G docker wazo-debug

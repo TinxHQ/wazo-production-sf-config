@@ -25,7 +25,7 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
-        - wazo-platform/wazo-provd-plugins:
+        - wazo-platform/asterisk:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4:
             zuul/exclude-unprotected-branches: true
@@ -37,10 +37,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-sbc:
             zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/ari-py:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/asterisk:
-        #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-provd-plugins:
+            zuul/exclude-unprotected-branches: true
         #     - wazo-platform/asterisk-debug:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/asterisk-lab:
