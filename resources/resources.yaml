@@ -44,8 +44,9 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-plugins:
             zuul/exclude-unprotected-branches: true
-        # - wazo-platform/xivo-ci:
-        #     zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-ci:
+            zuul/exclude-unprotected-branches: true
+
         - wazo-platform/wazo-ngcp-rtpengine-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-router-call-logd:
