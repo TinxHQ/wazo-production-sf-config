@@ -11,6 +11,7 @@ diskimages:
       # Those live in /usr/share/sf-elements
       - nodepool-minimal
       - zuul-worker-user
+      # Our own elements in this repository's /nodepool/elements folder
       - wazo
 
 labels:
