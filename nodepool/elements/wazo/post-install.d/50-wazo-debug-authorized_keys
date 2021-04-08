@@ -18,8 +18,8 @@ chown -R wazo-debug:wazo-debug /home/wazo-debug
 
 cat > /etc/sudoers.d/wazo-debug << EOF
 Defaults    !requiretty
-wazo ALL=(ALL) NOPASSWD:ALL
+wazo-debug ALL=(ALL) NOPASSWD:ALL
 EOF
 chmod 0440 /etc/sudoers.d/wazo-debug
 
-visudo -c || die "Error setting wazo sudo!"
+visudo -c || die "Error setting wazo-debug sudo!"
