@@ -5,6 +5,7 @@ apt-get update
 apt-get install -y \
     curl \
     equivs \
+    git \
     jq \
     lintian \
     make \
