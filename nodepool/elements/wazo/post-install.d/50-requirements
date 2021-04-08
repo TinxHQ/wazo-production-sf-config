@@ -8,6 +8,7 @@ apt-get install -y \
     git \
     jq \
     lintian \
+    lsof \
     make \
     python3-dev \
     tox
