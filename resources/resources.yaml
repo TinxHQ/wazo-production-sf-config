@@ -67,13 +67,13 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-lab:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/asterisk-vanilla:
+            zuul/exclude-unprotected-branches: true
 
         # To migrate
         #     - wazo-platform/asterisk-moh-opsound:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/asterisk-scale-poc:
-        #         zuul/exclude-unprotected-branches: true
-        #     - wazo-platform/asterisk-vanilla:
         #         zuul/exclude-unprotected-branches: true
         #     - wazo-platform/bntools:
         #         zuul/exclude-unprotected-branches: true
