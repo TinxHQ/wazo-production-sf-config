@@ -28,10 +28,10 @@ resources:
         # Done & some commented out to avoit Zuuls fighting over those
         # - wazo-platform/asterisk:
         #     zuul/exclude-unprotected-branches: true
-        # - wazo-platform/wazo-acceptance:
-        #     zuul/exclude-unprotected-branches: true
-        # - wazo-platform/wazo-ansible:
-        #     zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-acceptance:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-ansible:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-carrier:
