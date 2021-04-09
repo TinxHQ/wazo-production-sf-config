@@ -18,5 +18,11 @@ extra-labels:
       - name: pod-node-12
         image: localhost/k1s/node-12
         python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-02264638f93c14dea
+    pool: main
+    labels:
+      - name: pod-python-27
+        image: localhost/k1s/python-27
+        python-path: /usr/bin/python2.7
   
 
