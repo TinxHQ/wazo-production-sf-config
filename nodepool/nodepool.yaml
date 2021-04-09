@@ -13,6 +13,7 @@ diskimages:
       - zuul-worker-user
       # Our own elements in this repository's /nodepool/elements folder
       - wazo
+    python-path: /usr/bin/python3
 
 labels:
   - name: vm-debian-10-m1s
