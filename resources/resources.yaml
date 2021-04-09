@@ -35,6 +35,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ansible:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asterisk-cli:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-asterisk-config:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-asterisk-extra-modules:
@@ -48,6 +50,10 @@ resources:
         - wazo-platform/wazo-c4-router:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-sbc:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-chatd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-consul-config:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ngcp-rtpengine-packaging:
             zuul/exclude-unprotected-branches: true
@@ -120,7 +126,7 @@ resources:
         - wazo-platform/wazo-auth-keys:
             zuul/exclude-unprotected-branches: true
 
-        # To be archived / removed ?
+        # Waiting for asterisk infrastructure to be back online
         - wazo-platform/asterisk-debug:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-vanilla:
@@ -149,6 +155,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-manage-db:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confgend-client:
+            zuul/exclude-unprotected-branches: true
 
         # ImportError: No module named pkg_resources (wazo-tox-integration)
         - wazo-platform/wazo-router-confd:
@@ -158,6 +168,8 @@ resources:
         - wazo-platform/wazo-calld:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd:
             zuul/exclude-unprotected-branches: true
 
         # wazo patch incompatible with upstream
@@ -176,34 +188,19 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confgend:
+            zuul/exclude-unprotected-branches: true
 
         # ImportError: No module named yaml
         - wazo-platform/wazo-auth:
             zuul/exclude-unprotected-branches: true
 
-        # WIP
-        - wazo-platform/wazo-asterisk-cli:
-            zuul/exclude-unprotected-branches: true
-
-        - wazo-platform/wazo-chatd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-chatd-client:
-            zuul/exclude-unprotected-branches: true
-
-        - wazo-platform/wazo-confd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confd-client:
-            zuul/exclude-unprotected-branches: true
-
-        - wazo-platform/wazo-confgend:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confgend-client:
-            zuul/exclude-unprotected-branches: true
-
-        - wazo-platform/wazo-consul-config:
-            zuul/exclude-unprotected-branches: true
+        # dpkg-source: error: source package has two conflicting values - consul-template and asterisk
+        # https://sf.production.wazo.cloud/zuul/t/local/build/40c7be3d041d4ffcbe5ba148df0fcfed
         - wazo-platform/wazo-consul-template-packaging:
             zuul/exclude-unprotected-branches: true
+
+        # WIP
 
     #     - wazo-platform/wazo-debug:
     #         zuul/exclude-unprotected-branches: true
