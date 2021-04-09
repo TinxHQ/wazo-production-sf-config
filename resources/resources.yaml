@@ -28,6 +28,8 @@ resources:
         # Done
         - wazo-platform/asterisk:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/libconsul-c:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-acceptance:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ansible:
@@ -40,6 +42,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-sbc:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-ngcp-rtpengine-packaging:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-plugins:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-ci:
@@ -47,8 +51,6 @@ resources:
         - wazo-platform/xivo-test-helpers:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-utils:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-ngcp-rtpengine-packaging:
             zuul/exclude-unprotected-branches: true
 
         # To be archived / removed ?
@@ -109,40 +111,36 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/kvm:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/lordboard:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/mockserver-client-python:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/nginx-ssl:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/pylinphonelib:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/react-native-firebase:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/sccp-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/sccp-http:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/sccpp:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/vagrant:
+            zuul/exclude-unprotected-branches: true
 
         # WIP
-        - wazo-platform/asterisk-lab:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/libconsul-c:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/libpri:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd-cli:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd-client:
             zuul/exclude-unprotected-branches: true
 
         # To migrate
-    #     - wazo-platform/lordboard:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/mockserver-client-python:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/nginx-ssl:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/pylinphonelib:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/react-native-firebase:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/sccp-client:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/sccp-http:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/sccpp:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/vagrant:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-agentd:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-agentd-cli:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-agentd-client:
-    #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-agid:
     #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-amid:
