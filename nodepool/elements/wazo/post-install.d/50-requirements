@@ -11,4 +11,6 @@ apt-get install -y \
     lsof \
     make \
     python3-dev \
-    tox
+    python3-pip
+
+pip3 install tox
