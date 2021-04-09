@@ -113,6 +113,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-asyncio-ari-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-auth-example-backend:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-auth-keys:
+            zuul/exclude-unprotected-branches: true
 
         # To be archived / removed ?
         - wazo-platform/asterisk-debug:
@@ -168,20 +172,17 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-auth-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-example-backend:
+
+        - wazo-platform/wazo-call-logd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-keys:
+        - wazo-platform/wazo-call-logd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-calld:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-calld-client:
             zuul/exclude-unprotected-branches: true
 
   # To migrate
-  #     - wazo-platform/wazo-call-logd:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-call-logd-client:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-calld:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-calld-client:
-  #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-chatd:
   #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-chatd-client:
