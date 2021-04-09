@@ -33,8 +33,11 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-cli:
             zuul/exclude-unprotected-branches: true
-
         - wazo-platform/wazo-ansible:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asterisk-config:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asterisk-extra-modules:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4:
             zuul/exclude-unprotected-branches: true
@@ -108,6 +111,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-applicationd-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asyncio-ari-client:
+            zuul/exclude-unprotected-branches: true
 
         # To be archived / removed ?
         - wazo-platform/asterisk-debug:
@@ -132,6 +137,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-amid-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asterisk-doc-extractor:
+            zuul/exclude-unprotected-branches: true
 
         # ImportError: No module named pkg_resources (wazo-tox-integration)
         - wazo-platform/wazo-router-confd:
@@ -155,26 +162,18 @@ resources:
         # WIP
         - wazo-platform/wazo-asterisk-cli:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asterisk-config:
+        - wazo-platform/wazo-auth:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asterisk-doc-extractor:
+        - wazo-platform/wazo-auth-cli:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asterisk-extra-modules:
+        - wazo-platform/wazo-auth-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asyncio-ari-client:
+        - wazo-platform/wazo-auth-example-backend:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-auth-keys:
             zuul/exclude-unprotected-branches: true
 
   # To migrate
-  #     - wazo-platform/wazo-auth:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-auth-cli:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-auth-client:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-auth-example-backend:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-auth-keys:
-  #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-call-logd:
   #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-call-logd-client:
