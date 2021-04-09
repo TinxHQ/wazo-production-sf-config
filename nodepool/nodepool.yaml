@@ -19,6 +19,8 @@ labels:
     min-ready: 2
   - name: vm-debian-10-m2s
     min-ready: 0
+  - name: vm-debian-10-m1m
+    min-ready: 0
 
 providers:
   - name: openstack
@@ -48,6 +50,16 @@ providers:
         labels:
           - name: vm-debian-10-m2s
             flavor-name: m2.small
+            diskimage: img-debian-10
+        availability-zones:
+          - nova
+      - name: os-pool-m1m
+        max-servers: 1
+        networks:
+          - wazo-production-sf-net
+        labels:
+          - name: vm-debian-10-m1m
+            flavor-name: m1.medium
             diskimage: img-debian-10
         availability-zones:
           - nova
