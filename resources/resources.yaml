@@ -25,13 +25,15 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
-        # Done
         - wazo-platform/asterisk:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libconsul-c:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-acceptance:
+        - wazo-platform/libpri:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd-cli:
+            zuul/exclude-unprotected-branches: true
+
         - wazo-platform/wazo-ansible:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4:
@@ -51,33 +53,6 @@ resources:
         - wazo-platform/xivo-test-helpers:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-utils:
-            zuul/exclude-unprotected-branches: true
-
-        # To be archived / removed ?
-        - wazo-platform/asterisk-debug:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/asterisk-vanilla:
-            zuul/exclude-unprotected-branches: true
-
-        # a bytes-like object is required, not 'str'
-        - wazo-platform/wazo-router-call-logd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-router-calld:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-ui:
-            zuul/exclude-unprotected-branches: true
-
-        # ImportError: No module named pkg_resources
-        - wazo-platform/wazo-router-confd:
-            zuul/exclude-unprotected-branches: true
-
-        # wazo patch incompatible with upstream
-        - wazo-platform/bntools:
-            zuul/exclude-unprotected-branches: true
-
-        # code own tests failed
-        # https://github.com/wazo-platform/wazo-rtpe-config/pull/2
-        - wazo-platform/wazo-rtpe-config:
             zuul/exclude-unprotected-branches: true
 
         # No zuul.yaml
@@ -130,23 +105,50 @@ resources:
         - wazo-platform/vagrant:
             zuul/exclude-unprotected-branches: true
 
-        # WIP
-        - wazo-platform/libpri:
+        # To be archived / removed ?
+        - wazo-platform/asterisk-debug:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-agentd:
+        - wazo-platform/asterisk-vanilla:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-agentd-cli:
+
+        # sendmail issue ?
+        - wazo-platform/wazo-acceptance:
+            zuul/exclude-unprotected-branches: true
+
+        # a bytes-like object is required, not 'str' (wazo-tox-py37)
+        - wazo-platform/wazo-router-call-logd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-router-calld:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-ui:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-client:
             zuul/exclude-unprotected-branches: true
 
+        # ImportError: No module named pkg_resources (wazo-tox-integration)
+        - wazo-platform/wazo-router-confd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd:
+            zuul/exclude-unprotected-branches: true
+
+        # wazo patch incompatible with upstream
+        - wazo-platform/bntools:
+            zuul/exclude-unprotected-branches: true
+
+        # code own tests failed
+        # https://github.com/wazo-platform/wazo-rtpe-config/pull/2
+        - wazo-platform/wazo-rtpe-config:
+            zuul/exclude-unprotected-branches: true
+
+        # WIP
+        - wazo-platform/wazo-agid:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-amid:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-amid-client:
+            zuul/exclude-unprotected-branches: true
+
         # To migrate
-    #     - wazo-platform/wazo-agid:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-amid:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-amid-client:
-    #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-applicationd:
     #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-applicationd-client:
