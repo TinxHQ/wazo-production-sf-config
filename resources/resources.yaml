@@ -50,8 +50,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ngcp-rtpengine-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-rtpe-config:
-            zuul/exclude-unprotected-branches: true
 
         # To be archived / removed ?
         - wazo-platform/asterisk-debug:
@@ -73,6 +71,11 @@ resources:
 
         # wazo patch incompatible with upstream
         - wazo-platform/bntools:
+            zuul/exclude-unprotected-branches: true
+
+        # code own tests failed
+        # https://github.com/wazo-platform/wazo-rtpe-config/pull/2
+        - wazo-platform/wazo-rtpe-config:
             zuul/exclude-unprotected-branches: true
 
         # No zuul.yaml
@@ -112,10 +115,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libconsul-c:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/libpri:
+            zuul/exclude-unprotected-branches: true
 
         # To migrate
-    #     - wazo-platform/libpri:
-    #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/lordboard:
     #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/mockserver-client-python:
