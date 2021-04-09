@@ -195,10 +195,10 @@ resources:
         - wazo-platform/wazo-confd-client:
             zuul/exclude-unprotected-branches: true
 
-  #     - wazo-platform/wazo-confgend:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-confgend-client:
-  #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confgend:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confgend-client:
+            zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-consul-config:
   #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-consul-template-packaging:
