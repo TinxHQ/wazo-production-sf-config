@@ -147,6 +147,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-auth-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-manage-db:
+            zuul/exclude-unprotected-branches: true
 
         # ImportError: No module named pkg_resources (wazo-tox-integration)
         - wazo-platform/wazo-router-confd:
@@ -154,6 +156,8 @@ resources:
         - wazo-platform/wazo-agentd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-calld:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-call-logd:
             zuul/exclude-unprotected-branches: true
 
         # wazo patch incompatible with upstream
@@ -170,6 +174,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-calld-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-call-logd-client:
+            zuul/exclude-unprotected-branches: true
 
         # ImportError: No module named yaml
         - wazo-platform/wazo-auth:
@@ -179,22 +185,16 @@ resources:
         - wazo-platform/wazo-asterisk-cli:
             zuul/exclude-unprotected-branches: true
 
-        - wazo-platform/wazo-call-logd:
+        - wazo-platform/wazo-chatd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-call-logd-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-manage-db:
+        - wazo-platform/wazo-chatd-client:
             zuul/exclude-unprotected-branches: true
 
-  # To migrate
-  #     - wazo-platform/wazo-chatd:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-chatd-client:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-confd:
-  #         zuul/exclude-unprotected-branches: true
-  #     - wazo-platform/wazo-confd-client:
-  #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd-client:
+            zuul/exclude-unprotected-branches: true
+
   #     - wazo-platform/wazo-confgend:
   #         zuul/exclude-unprotected-branches: true
   #     - wazo-platform/wazo-confgend-client:
