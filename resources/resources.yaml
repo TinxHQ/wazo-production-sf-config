@@ -65,6 +65,36 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-utils:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-router-call-logd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-router-calld:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-ui:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-amid:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-amid-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-asterisk-doc-extractor:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-auth-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-manage-db:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confgend-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-calld:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-call-logd:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd:
+            zuul/exclude-unprotected-branches: true
 
         # No zuul.yaml
         - wazo-platform/ari-py:
@@ -123,8 +153,9 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-auth-example-backend:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-keys:
+        - wazo-platform/wazo-dev-ssh-pubkeys:
             zuul/exclude-unprotected-branches: true
+        # end no zuul.yaml
 
         # Waiting for asterisk infrastructure to be back online
         - wazo-platform/asterisk-debug:
@@ -136,40 +167,8 @@ resources:
         - wazo-platform/wazo-acceptance:
             zuul/exclude-unprotected-branches: true
 
-        # a bytes-like object is required, not 'str' (wazo-tox-py37)
-        - wazo-platform/wazo-router-call-logd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-router-calld:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-ui:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-agentd-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-amid:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-amid-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asterisk-doc-extractor:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-manage-db:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confd-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confgend-client:
-            zuul/exclude-unprotected-branches: true
-
-        # ImportError: No module named pkg_resources (wazo-tox-integration)
+        # Timeout
         - wazo-platform/wazo-router-confd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-agentd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-calld:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-call-logd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confd:
             zuul/exclude-unprotected-branches: true
 
         # wazo patch incompatible with upstream
@@ -201,27 +200,27 @@ resources:
             zuul/exclude-unprotected-branches: true
 
         # WIP
+        - wazo-platform/wazo-auth-keys:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-debug:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dird:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dird-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dist:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dist-upgrade:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dummy-package:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dummy-plugin:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dxtora:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dxtorc:
+            zuul/exclude-unprotected-branches: true
 
-    #     - wazo-platform/wazo-debug:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dev-ssh-pubkeys:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dird:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dird-client:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dist:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dist-upgrade:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dummy-package:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dummy-plugin:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dxtora:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-dxtorc:
-    #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-js-sdk:
     #         zuul/exclude-unprotected-branches: true
     #     - wazo-platform/wazo-kamailio-packaging:
