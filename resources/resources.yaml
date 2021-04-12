@@ -119,6 +119,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dird-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dist-upgrade:
+            zuul/exclude-unprotected-branches: true
 
         # Waiting for asterisk infrastructure to be back online
         - wazo-platform/asterisk-debug:
@@ -147,8 +149,6 @@ resources:
 
         - wazo-platform/wazo-dird:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dist-upgrade:
-            zuul/exclude-unprotected-branches: true
 
         - wazo-platform/wazo-js-sdk:
             zuul/exclude-unprotected-branches: true
@@ -157,19 +157,19 @@ resources:
         - wazo-platform/wazo-keyring:
             zuul/exclude-unprotected-branches: true
 
-    #     - wazo-platform/wazo-lib-rest-client:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-libsccp:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-libsrtp-packaging:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-libtestlink:
-    #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-lib-rest-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-libsccp:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-libsrtp-packaging:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-libtestlink:
+            zuul/exclude-unprotected-branches: true
 
-    #     - wazo-platform/wazo-log-tracer:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-logo:
-    #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-log-tracer:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-logo:
+            zuul/exclude-unprotected-branches: true
 
     #     - wazo-platform/wazo-market:
     #         zuul/exclude-unprotected-branches: true
