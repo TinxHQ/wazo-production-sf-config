@@ -109,71 +109,16 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-debug:
             zuul/exclude-unprotected-branches: true
-
-        # No zuul.yaml
-        - wazo-platform/ari-py:
+        - wazo-platform/wazo-dxtorc:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/asterisk-lab:
+        - wazo-platform/wazo-dxtora:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/asterisk-moh-opsound:
+        - wazo-platform/wazo-call-logd-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/asterisk-scale-poc:
+        - wazo-platform/wazo-dist:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/chan-test:
+        - wazo-platform/wazo-dird-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/dahdi-linux:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/dahdi-tools:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-add-archive:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-installer:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-pxelinux:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-repo-archive:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-repo-main:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/denv:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/frontend-hackathon-emergency:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/kvm:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/lordboard:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/mockserver-client-python:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/nginx-ssl:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/pylinphonelib:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/react-native-firebase:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/sccp-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/sccp-http:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/sccpp:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/vagrant:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-applicationd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-applicationd-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-asyncio-ari-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-example-backend:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dev-ssh-pubkeys:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dummy-package:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dummy-plugin:
-            zuul/exclude-unprotected-branches: true
-        # end no zuul.yaml
 
         # Waiting for asterisk infrastructure to be back online
         - wazo-platform/asterisk-debug:
@@ -190,8 +135,6 @@ resources:
             zuul/exclude-unprotected-branches: true
 
         # Missing node for py27
-        - wazo-platform/wazo-call-logd-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confgend:
             zuul/exclude-unprotected-branches: true
 
@@ -204,23 +147,15 @@ resources:
 
         - wazo-platform/wazo-dird:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dird-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dist:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dist-upgrade:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dxtora:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dxtorc:
-            zuul/exclude-unprotected-branches: true
 
-    #     - wazo-platform/wazo-js-sdk:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-kamailio-packaging:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-keyring:
-    #         zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-js-sdk:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-kamailio-packaging:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-keyring:
+            zuul/exclude-unprotected-branches: true
 
     #     - wazo-platform/wazo-lib-rest-client:
     #         zuul/exclude-unprotected-branches: true
