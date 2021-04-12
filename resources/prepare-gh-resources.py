@@ -31,7 +31,7 @@ resources:
       source-repositories:
 """
 
-ZUUL_PROJECTS = ["wazo-platform/sf-config", "wazo-platform/sf-jobs"]
+ZUUL_PROJECTS = ["TinxHQ/wazo-production-sf-config", "TinxHQ/wazo-production-sf-jobs"]
 
 
 def main():
@@ -51,9 +51,7 @@ def main():
         user = getpass.getpass("User: ")
         password = getpass.getpass("Password: ")
 
-    parser = argparse.ArgumentParser(
-        description='Configure Wazo Github project'
-    )
+    parser = argparse.ArgumentParser(description='Configure Wazo Github project')
     parser.add_argument("--doit", action="store_true")
 
     args = parser.parse_args()
