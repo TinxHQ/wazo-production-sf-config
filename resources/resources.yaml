@@ -161,20 +161,11 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libsccp:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-libsrtp-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libtestlink:
             zuul/exclude-unprotected-branches: true
 
-        - wazo-platform/wazo-log-tracer:
+        - wazo-platform/wazo-market-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-logo:
-            zuul/exclude-unprotected-branches: true
-
-    #     - wazo-platform/wazo-market:
-    #         zuul/exclude-unprotected-branches: true
-    #     - wazo-platform/wazo-market-client:
-    #         zuul/exclude-unprotected-branches: true
 
     #     - wazo-platform/wazo-nginx:
     #         zuul/exclude-unprotected-branches: true
