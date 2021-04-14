@@ -7,6 +7,25 @@ labels:
 
 
 extra-labels:
+  - provider: managed-k1s-provider-i-0674ef6255caf28df
+    pool: main
+    labels:
+      - name: pod-debian-10
+        image: localhost/k1s/debian-10
+        python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-0674ef6255caf28df
+    pool: main
+    labels:
+      - name: pod-node-12
+        image: localhost/k1s/node-12
+        python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-0674ef6255caf28df
+    pool: main
+    labels:
+      - name: pod-python-27
+        image: localhost/k1s/python-27
+        python-path: /usr/bin/python2.7
+  
   - provider: managed-k1s-provider-i-0d9d81d1023d24c46
     pool: main
     labels:
