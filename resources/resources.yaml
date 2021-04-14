@@ -9,11 +9,11 @@ resources:
     config-ptl:
       description: Team lead for the config repo
       members:
-        - infra@wazo.io
+        - infra+wazo-production-sf@wazo.io
     config-core:
       description: Team core for the config repo
       members:
-        - dev@wazo.io
+        - dev+wazo-production-sf@wazo.io
   projects:
     test:
       description: "Testing Zuul itself"
