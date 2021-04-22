@@ -87,6 +87,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-calld:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-chatd:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-chatd-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd-client:
