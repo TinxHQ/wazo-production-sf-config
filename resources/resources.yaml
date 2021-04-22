@@ -25,13 +25,17 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
+        - wazo-platform/ansible-role-consul-service:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/ansible-role-coturn:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-debug:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-vanilla:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/bntools: # Wazo patch incompatible with upstream
+        - wazo-platform/bntools:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/chan-test:
             zuul/exclude-unprotected-branches: true
@@ -39,7 +43,7 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libpri:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-acceptance: # Flacky & sendmail issue ?
+        - wazo-platform/wazo-acceptance:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-cli:
             zuul/exclude-unprotected-branches: true
@@ -101,7 +105,7 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-consul-config:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-consul-template-packaging: # dpkg-source: error: source package has two conflicting values - consul-template and asterisk
+        - wazo-platform/wazo-consul-template-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-debug:
             zuul/exclude-unprotected-branches: true
