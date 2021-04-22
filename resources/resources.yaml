@@ -197,8 +197,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-promise-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-pyapns2-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pydantic-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pyfcm-packaging:
