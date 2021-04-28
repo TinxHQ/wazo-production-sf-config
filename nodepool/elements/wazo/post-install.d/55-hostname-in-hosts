@@ -2,5 +2,5 @@
 
 cat <<EOF >/etc/crontab.d/hostname_in_etc_hosts.sh
 #!/bin/sh
-@reboot echo "127.0.0.1	$(hostname)" >> /etc/hosts
+@reboot echo "127.0.0.1	\$(hostname)" >> /etc/hosts
 EOF
