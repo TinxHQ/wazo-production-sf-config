@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-cat <<EOF >/etc/profile.d/hostname_in_etc_hosts.sh
-#!/bin/sh
-echo "127.0.0.1	$(hostname)" >> /etc/hosts
-EOF
