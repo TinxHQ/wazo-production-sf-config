@@ -133,6 +133,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libsccp:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-libsrtp-packaging:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libtestlink:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-market-client:
