@@ -123,6 +123,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dxtorc:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-export-import:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-js-sdk:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-kamailio-packaging:
