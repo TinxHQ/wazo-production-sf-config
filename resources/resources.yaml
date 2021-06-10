@@ -19,8 +19,7 @@ resources:
       description: "Testing Zuul itself"
       connection: github.com
       source-repositories:
-        - TinxHQ/zuul-test-job:
-            zuul/exclude-unprotected-branches: false
+        - TinxHQ/zuul-test-job
     wazo-platform:
       description: "Wazo Platform"
       connection: github.com
