@@ -43,6 +43,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libpri:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/pylinphonelib:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-acceptance:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-cli:
