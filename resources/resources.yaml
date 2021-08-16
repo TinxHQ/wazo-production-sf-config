@@ -283,6 +283,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xgong:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-acceptance-server:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-backup:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-bus:
