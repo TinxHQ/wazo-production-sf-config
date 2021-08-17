@@ -3,7 +3,7 @@ FROM node:12-buster
 # Zuul minimal package
 RUN apt-get update && \
     apt-get install -y sudo rsync git traceroute iproute2 python3-setuptools python3-pip && \
-    pip3 install bashate flake8 yamllint
+    pip3 install bashate doc8 flake8 yamllint
 
 # Zuul uses revoke-sudo. We can simulate that by moving the default sudoers to zuul
 # And this will prevent root from using sudo when the file is removed by revoke-sudo

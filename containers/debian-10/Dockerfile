@@ -8,6 +8,7 @@ RUN apt-get update && \
     iproute2 \
     python3-apt \
     python3-bashate \
+    python3-doc8 \
     python3-flake8 \
     python3-pip \
     python3-setuptools \

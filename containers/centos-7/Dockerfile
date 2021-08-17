@@ -21,7 +21,7 @@ RUN yum install -y sudo rsync git traceroute iproute python3-setuptools python3-
 RUN ln -sf /bin/pip3 /bin/pip && /bin/pip3 install --user "tox>=3.8.0"
 
 # Install base Python linter for the demo project
-RUN /bin/pip install bashate flake8 yamllint
+RUN /bin/pip install bashate doc8 flake8 yamllint
 
 # Zuul uses revoke-sudo. We can simulate that by moving the default sudoers to zuul
 # And this will prevent root from using sudo when the file is removed by revoke-sudo
