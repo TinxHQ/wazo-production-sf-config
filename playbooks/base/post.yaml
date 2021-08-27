@@ -26,7 +26,7 @@
       ara_report_type: database
       ara_report_path: "{{ zuul.executor.log_root }}/ara-report"
 
-- hosts: "sf.production.wazo.cloud"
+- hosts: "zuul.wazo.community"
   gather_facts: false
   tasks:
     # Use a block because play vars doesn't take precedence on roles vars
@@ -35,6 +35,6 @@
         - import_role: name=buildset-artifacts-location
       vars:
         zuul_log_compress: true
-        zuul_log_url: "https://sf.production.wazo.cloud/logs"
+        zuul_log_url: "https://zuul.wazo.community/logs"
         zuul_logserver_root: "{{ site_sflogs.path }}"
 

@@ -4,7 +4,7 @@ resources:
   tenants:
     local:
       description: "The local tenant."
-      url: "https://sf.production.wazo.cloud/manage"
+      url: "https://zuul.wazo.community/manage"
       default-connection: github.com
       tenant-options:
         zuul/report-build-page: True

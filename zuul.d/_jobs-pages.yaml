@@ -12,7 +12,7 @@
     protected: true
     vars:
       src_dir: /
-      fqdn: sf.production.wazo.cloud
+      fqdn: zuul.wazo.community
 
 - job:
     name: build-pages

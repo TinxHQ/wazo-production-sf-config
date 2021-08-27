@@ -19,16 +19,16 @@
     start:
       github.com:
         status: 'pending'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/status/change/{change.number},{change.patchset}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/status/change/{change.number},{change.patchset}"
         comment: false
     success:
       github.com:
         status: 'success'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/buildset/{buildset.uuid}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
     failure:
       github.com:
         status: 'failure'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/buildset/{buildset.uuid}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
 
 - pipeline:
     name: gate
@@ -75,18 +75,18 @@
     start:
       github.com:
         status: 'pending'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/status/change/{change.number},{change.patchset}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/status/change/{change.number},{change.patchset}"
         comment: false
     success:
       github.com:
         status: 'success'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/buildset/{buildset.uuid}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
         merge: true
         comment: true
     failure:
       github.com:
         status: 'failure'
-        status-url: "https://sf.production.wazo.cloud/zuul/t/local/buildset/{buildset.uuid}"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
         comment: true
     window-floor: 20
     window-increase-factor: 2
@@ -103,7 +103,7 @@
           ref: ^refs/heads/.*$
     failure:
       smtp:
-        from: "zuul@sf.production.wazo.cloud"
+        from: "zuul@zuul.wazo.community"
         to: "infra@wazo.io"
         subject: '[Zuul] Job failed in post pipeline: {change.project}'
 
@@ -119,7 +119,7 @@
           ref: ^refs/tags/([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9alpha|beta|rc.-]+))?(?:\+([0-9a-zA-Z.-]+))?$
     failure:
       smtp:
-        from: "zuul@sf.production.wazo.cloud"
+        from: "zuul@zuul.wazo.community"
         to: "infra@wazo.io"
         subject: '[Zuul] Job failed in pre-release pipeline: {change.project}'
 
@@ -135,7 +135,7 @@
           ref: ^refs/tags/([0-9]+)\.([0-9]+)\.([0-9]+)(?:-([0-9a-zA-Z.-]+))?(?:\+([0-9a-zA-Z.-]+))?$
     failure:
       smtp:
-        from: "zuul@sf.production.wazo.cloud"
+        from: "zuul@zuul.wazo.community"
         to: "infra@wazo.io"
         subject: '[Zuul] Job failed in release pipeline: {change.project}'
 
@@ -150,7 +150,7 @@
         - time: '0 0 * * *'
     failure:
       smtp:
-        from: "zuul@sf.production.wazo.cloud"
+        from: "zuul@zuul.wazo.community"
         to: "infra@wazo.io"
         subject: '[Zuul] Job failed in periodic pipeline: {change.project}'
 

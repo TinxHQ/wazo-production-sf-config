@@ -37,8 +37,8 @@
     secrets:
       - service_user
     vars:
-      zuul_log_url: "https://sf.production.wazo.cloud/logs"
-      gateway_url: "https://sf.production.wazo.cloud"
+      zuul_log_url: "https://zuul.wazo.community/logs"
+      gateway_url: "https://zuul.wazo.community"
       tenant_config: False
     nodeset:
       nodes: []
@@ -87,7 +87,7 @@
     nodeset:
       nodes: []
     vars:
-      zuul_web_url: "https://sf.production.wazo.cloud/zuul"
+      zuul_web_url: "https://zuul.wazo.community/zuul"
     description: |
       This job wait for the queue ahead to be empty.
 
