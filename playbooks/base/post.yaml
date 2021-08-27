@@ -26,7 +26,7 @@
       ara_report_type: database
       ara_report_path: "{{ zuul.executor.log_root }}/ara-report"
 
-- hosts: "{{ site_sflogs.fqdn }}"
+- hosts: "sf.production.wazo.cloud"
   gather_facts: false
   tasks:
     # Use a block because play vars doesn't take precedence on roles vars

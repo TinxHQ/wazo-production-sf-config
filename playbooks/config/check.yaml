@@ -85,12 +85,6 @@
         chdir: "{{ config_root }}"
       when: '"gerrit" in arch.roles'
 
-    - name: Check dashboards
-      command: python3 /usr/libexec/software-factory/sf-update-dashboard --check --input dashboards/
-      args:
-        chdir: "{{ config_root }}"
-      when: '"gerrit" in arch.roles'
-
     - name: Check policy file
       command: python3 -c "import yaml; yaml.safe_load(open('policies/policy.yaml'))"
       args:
@@ -111,7 +105,6 @@
           echo ${dhall_conf}
           dhall-to-yaml --file ${dhall_conf} --output build/$(basename ${dhall_conf} .dhall).yaml || exit 1
         done
-      register: _nodepool_conf
       args:
         chdir: "{{ config_root }}"
 
@@ -173,7 +166,6 @@
             chdir: "{{ config_root }}"
       when:
         - '"nodepool-launcher" in arch.roles'
-        - not _nodepool_conf.stdout
 
     - name: Validate zuul configuration
       block:
