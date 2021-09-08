@@ -31,6 +31,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-debug:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/asterisk-moh-opsound:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-vanilla:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk:
