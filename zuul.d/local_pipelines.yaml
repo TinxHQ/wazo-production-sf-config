@@ -6,8 +6,7 @@
       merged.
     success-message: Build succeeded (auto-merge pipeline).
     failure-message: |
-      Build failed (auto-merge pipeline).  For information on how to proceed, see
-      http://docs.openstack.org/infra/manual/developers.html#automated-testing
+      Build failed (auto-merge pipeline).
     manager: dependent
     precedence: high
     post-review: True
