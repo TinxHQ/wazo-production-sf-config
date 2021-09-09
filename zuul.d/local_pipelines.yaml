@@ -1,4 +1,3 @@
-
 - pipeline:
     name: auto-merge
     description: |
@@ -16,7 +15,7 @@
       github.com:
         # Require label
         label: auto-merge
-        status: "wazo-community-zuul:local/check:success"
+        status: "wazo-community-zuul\\[bot\\]:local/check:success"
         open: True
         current-patchset: True
     trigger:
@@ -32,27 +31,27 @@
           state: request_changes
         - event: pull_request
           action: status
-          status: "wazo-community-zuul:local/check:success"
+          status: "wazo-community-zuul\\[bot\\]:local/check:success"
         - event: pull_request
           action: labeled
           label:
             - auto-merge
     start:
       github.com:
-        status: 'pending'
+        status: "pending"
         status-url: "https://zuul.wazo.community/zuul/t/local/status.html"
         comment: false
     success:
       github.com:
-        status: 'success'
+        status: "success"
         merge: true
         comment: true
-        review: 'approve'
-        review-body: ''
+        review: "approve"
+        review-body: ""
       sqlreporter:
     failure:
       github.com:
-        status: 'failure'
+        status: "failure"
         comment: true
       sqlreporter:
     window-floor: 20
