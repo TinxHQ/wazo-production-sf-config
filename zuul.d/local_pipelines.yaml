@@ -44,16 +44,8 @@
       github.com:
         status: "success"
         status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
-        merge: true
-        comment: true
-        review: "approve"
-        review-body: ""
-    merge-failure:
-      github.com:
-        status: "success"
-        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
         merge: false
-        comment: true
+        comment: false
         review: "approve"
         review-body: ""
     failure:
