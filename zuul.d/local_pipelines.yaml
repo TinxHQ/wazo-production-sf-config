@@ -38,20 +38,28 @@
     start:
       github.com:
         status: "pending"
-        status-url: "https://zuul.wazo.community/zuul/t/local/status.html"
+        status-url: "https://zuul.wazo.community/zuul/t/local/status/change/{change.number},{change.patchset}"
         comment: false
     success:
       github.com:
         status: "success"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
         merge: true
         comment: true
         review: "approve"
         review-body: ""
-      sqlreporter:
+    merge-failure:
+      github.com:
+        status: "success"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
+        merge: false
+        comment: true
+        review: "approve"
+        review-body: ""
     failure:
       github.com:
         status: "failure"
+        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
         comment: true
-      sqlreporter:
     window-floor: 20
     window-increase-factor: 2
