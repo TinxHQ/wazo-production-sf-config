@@ -44,7 +44,7 @@
       github.com:
         status: "success"
         status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
-        merge: false
+        merge: true
         comment: false
         review: "approve"
         review-body: ""
