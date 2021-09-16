@@ -1,76 +1,18 @@
 - pipeline:
     name: auto-merge
     description: |
-      Changes that have been self-approved (auto-merge label) are enqueued
-      in order in this pipeline, and if they pass tests, will be
-      merged.
+      Changes that have been labeled as "auto-merge" will be approved 
+      by Zuul through this pipeline, and the label "mergeit" will be added, 
+      hence the change will be merged through the usual check and gate.
     success-message: Build succeeded (auto-merge pipeline).
     failure-message: |
       Build failed (auto-merge pipeline).
-    manager: dependent
-    precedence: high
-    post-review: True
-    require:
-      github.com:
-        # Require label
-        label: auto-merge
-        status: (?i)^wazo-community-zuul.*:local/check:success$
-        open: True
-        current-patchset: True
-    trigger:
-      github.com:
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*remerge\s*$
-        - event: pull_request_review
-          action: submitted
-          state: approved
-        - event: pull_request_review
-          action: dismissed
-          state: request_changes
-        - event: pull_request
-          action: status
-          status: (?i)^wazo-community-zuul.*:local/check:success$
-        - event: pull_request
-          action: labeled
-          label:
-            - auto-merge
-    start:
-      github.com:
-        status: "pending"
-        status-url: "https://zuul.wazo.community/zuul/t/local/status/change/{change.number},{change.patchset}"
-        comment: false
-    success:
-      github.com:
-        status: "success"
-        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
-        merge: true
-        comment: false
-        review: "approve"
-        review-body: ""
-    failure:
-      github.com:
-        status: "failure"
-        status-url: "https://zuul.wazo.community/zuul/t/local/buildset/{buildset.uuid}"
-        comment: true
-    window-floor: 20
-    window-increase-factor: 2
-
-- pipeline:
-    name: self-approve
-    description: |
-      Changes that have been self-approved (self-approve label) are enqueued
-      in order in this pipeline, and if they pass tests, will be
-      approved.
-    success-message: Build succeeded (self-approve pipeline).
-    failure-message: |
-      Build failed (self-approve pipeline).
     manager: independent
     precedence: high
     post-review: True
     require:
       github.com:
-        label: self-approve
+        label: auto-merge
         open: True
         current-patchset: True
     trigger:
@@ -79,13 +21,22 @@
           action: comment
           comment: (?i)^\s*reapprove\s*$
         - event: pull_request
+          action: comment
+          comment: (?i)^\s*remerge\s*$
+        - event: pull_request_review
+          action: submitted
+          state: approved
+        - event: pull_request_review
+          action: dismissed
+          state: request_changes          
+        - event: pull_request
           action: labeled
           label:
-            - self-approve
+            - auto-merge
     success:
       github.com:
-        status: "success"
+        status: success
         merge: false
         comment: false
-        review: "approve"
-        review-body: ""
+        review: approve        
+        label: mergeit
