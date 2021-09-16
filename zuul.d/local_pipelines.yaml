@@ -23,12 +23,13 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*remerge\s*$
-        - event: pull_request_review
-          action: submitted
-          state: approved
+        # Don't enable that, otherwise it'll trigger on it's own approval, and loop
+        # - event: pull_request_review
+        #   action: submitted
+        #   state: approved
         - event: pull_request_review
           action: dismissed
-          state: request_changes          
+          state: request_changes                   
         - event: pull_request
           action: labeled
           label:
