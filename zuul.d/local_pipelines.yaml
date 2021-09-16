@@ -35,8 +35,9 @@
             - auto-merge
     success:
       github.com:
-        status: success
+        status: "success"
         merge: false
         comment: false
-        review: approve        
-        label: mergeit
+        review: "approve"
+        review-body: ""
+        label: "mergeit"
