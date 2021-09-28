@@ -265,6 +265,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-setupd:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-sdk:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sounds:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
