@@ -309,7 +309,7 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-dao:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-dbms:
+        - wazo-platform/wazo-dbms:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-fetchfw:
             zuul/exclude-unprotected-branches: true
