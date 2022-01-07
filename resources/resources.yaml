@@ -115,6 +115,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-consul-template-packaging:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dbms:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-debug:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dev-ssh-pubkeys:
@@ -308,8 +310,6 @@ resources:
         - wazo-platform/xivo-config:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-dao:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dbms:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-fetchfw:
             zuul/exclude-unprotected-branches: true
