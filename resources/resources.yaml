@@ -130,7 +130,7 @@ resources:
         - wazo-platform/wazo-dist:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-docker:
-            zuul/exclude-unprotected-branches: false
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dummy-package:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dxtora:
