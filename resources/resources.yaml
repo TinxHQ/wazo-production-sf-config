@@ -104,7 +104,7 @@ resources:
         - wazo-platform/wazo-chatd-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-codec-opus-open-source:
-            zuul/exclude-unprotected-branches: false
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd:
