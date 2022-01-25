@@ -220,7 +220,7 @@ resources:
         - wazo-platform/wazo-python-kombu-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-marshmallow-packaging:
-            zuul/exclude-unprotected-branches: false
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-multipart-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-portend-packaging:
