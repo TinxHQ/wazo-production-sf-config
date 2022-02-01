@@ -105,10 +105,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-codec-opus-open-source:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd-cli:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confd-cli:
-            zuul/exclude-unprotected-branches: false
         - wazo-platform/wazo-confd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confgend-client:
