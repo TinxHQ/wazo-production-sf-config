@@ -4,7 +4,7 @@ labels:
   - name: pod-centos-7
 
 extra-labels:
-  - provider: managed-k1s-provider-i-09d857671bb1a6e6e
+  - provider: managed-k1s-provider-i-06a744820e8f3958e
     pool: main
     labels:
       - name: pod-centos-7
