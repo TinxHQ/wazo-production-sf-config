@@ -235,6 +235,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pyfcm-packaging:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-python-pystun3-packaging:
+            zuul/exclude-unprotected-branches: false
         - wazo-platform/wazo-python-rfc3986-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-rx-packaging:
