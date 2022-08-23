@@ -65,22 +65,22 @@ providers:
         availability-zones:
           - nova
   # openstack2 provider config
-  # - name: openstack2
-  #   cloud: openstack2
-  #   image-name-format: "{image_name}"
-  #   boot-timeout: 180
-  #   rate: 10.0
-  #   diskimages:
-  #     - name: Ubuntu-20.04
-  #       config-drive: true
-  #   pools:
-  #     - name: os-pool-ubnt1
-  #       max-servers: 1
-  #       networks:
-  #         - provider
-  #       labels:
-  #         - name: vm-ubuntu-10-ubnt1
-  #           flavor-name: m1.small
-  #           diskimage: Ubuntu-20.04
-  #       availability-zones:
-  #         - nova
+  - name: openstack2
+    cloud: openstack2
+    image-name-format: "{image_name}"
+    boot-timeout: 180
+    rate: 10.0
+    diskimages:
+      - name: Ubuntu-20.04
+        config-drive: true
+    pools:
+      - name: os-pool-ubnt1
+        max-servers: 1
+        networks:
+          - provider
+        labels:
+          - name: vm-ubuntu-10-ubnt1
+            flavor-name: m1.small
+            diskimage: Ubuntu-20.04
+        availability-zones:
+          - nova
