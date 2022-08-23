@@ -67,20 +67,20 @@ providers:
   # openstack2 provider config
   - name: openstack2
     cloud: openstack2
-    image-name-format: "{image_name}"
+    image-name-format: "{image_name}-{timestamp}"
     boot-timeout: 180
     rate: 10.0
     diskimages:
-      - name: Ubuntu-20.04
+      - name: img-debian-10
         config-drive: true
     pools:
-      - name: os-pool-ubnt1
+      - name: os-pool-m1s
         max-servers: 1
         networks:
-          - provider
+          - wazo-production-sf-net
         labels:
-          - name: vm-ubuntu-10-ubnt1
+          - name: vm-debian-10-m1s
             flavor-name: m1.small
-            diskimage: Ubuntu-20.04
+            diskimage: img-debian-10
         availability-zones:
           - nova
