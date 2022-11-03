@@ -69,8 +69,9 @@ providers:
   # openstack2 provider config
   - name: openstack2
     cloud: openstack2
+    clean-floating-ips: true
     image-name-format: "{image_name}-{timestamp}"
-    boot-timeout: 180
+    boot-timeout: 120
     rate: 10.0
     diskimages:
       - name: img-debian-10
