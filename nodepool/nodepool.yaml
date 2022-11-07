@@ -21,9 +21,9 @@ labels:
   - name: vm-debian-10-m1s-openstack2
     min-ready: 0
   - name: vm-debian-10-m2s
-    min-ready: 0
+    min-ready: 1
   - name: vm-debian-10-m1m
-    min-ready: 0
+    min-ready: 1
   - name: vm-debian-10-m1m-openstack2
     min-ready: 0
 
@@ -39,7 +39,7 @@ providers:
         config-drive: true
     pools:
       - name: os-pool-m1s
-        max-servers: 5
+        max-servers: 0
         networks:
           - wazo-production-sf-net
         labels:
@@ -49,7 +49,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m2s
-        max-servers: 1
+        max-servers: 0
         networks:
           - wazo-production-sf-net
         labels:
@@ -59,7 +59,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m1m
-        max-servers: 1
+        max-servers: 0
         networks:
           - wazo-production-sf-net
         labels:
@@ -80,7 +80,7 @@ providers:
         config-drive: true
     pools:
       - name: os-pool-m1s
-        max-servers: 0
+        max-servers: 5
         networks:
           - wazo-production-sf-net
         labels:
@@ -90,7 +90,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m1s-openstack2
-        max-servers: 2
+        max-servers: 5
         networks:
           - wazo-production-sf-net
         labels:
@@ -100,7 +100,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m2s
-        max-servers: 0
+        max-servers: 5
         networks:
           - wazo-production-sf-net
         labels:
@@ -110,7 +110,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m1m
-        max-servers: 0
+        max-servers: 5
         networks:
           - wazo-production-sf-net
         labels:
@@ -120,7 +120,7 @@ providers:
         availability-zones:
           - nova
       - name: os-pool-m1m-openstack2
-        max-servers: 2
+        max-servers: 5
         networks:
           - wazo-production-sf-net
         labels:
