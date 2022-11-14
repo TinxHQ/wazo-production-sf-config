@@ -18,13 +18,9 @@ diskimages:
 labels:
   - name: vm-debian-10-m1s
     min-ready: 2
-  - name: vm-debian-10-m1s-openstack2
-    min-ready: 0
   - name: vm-debian-10-m2s
     min-ready: 1
   - name: vm-debian-10-m1m
-    min-ready: 1
-  - name: vm-debian-10-m1m-openstack2
     min-ready: 0
 
 providers:
@@ -89,16 +85,6 @@ providers:
             diskimage: img-debian-10
         availability-zones:
           - nova
-      - name: os-pool-m1s-openstack2
-        max-servers: 5
-        networks:
-          - wazo-production-sf-net
-        labels:
-          - name: vm-debian-10-m1s-openstack2
-            flavor-name: m1.small
-            diskimage: img-debian-10
-        availability-zones:
-          - nova
       - name: os-pool-m2s
         max-servers: 5
         networks:
@@ -115,16 +101,6 @@ providers:
           - wazo-production-sf-net
         labels:
           - name: vm-debian-10-m1m
-            flavor-name: m1.medium
-            diskimage: img-debian-10
-        availability-zones:
-          - nova
-      - name: os-pool-m1m-openstack2
-        max-servers: 5
-        networks:
-          - wazo-production-sf-net
-        labels:
-          - name: vm-debian-10-m1m-openstack2
             flavor-name: m1.medium
             diskimage: img-debian-10
         availability-zones:
