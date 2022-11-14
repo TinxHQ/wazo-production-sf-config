@@ -24,8 +24,8 @@ labels:
     min-ready: 0
 
 providers:
-  - name: openstack
-    cloud: openstack
+  - name: openstack-legacy
+    cloud: openstack-legacy
     clean-floating-ips: true
     image-name-format: "{image_name}-{timestamp}"
     boot-timeout: 120
