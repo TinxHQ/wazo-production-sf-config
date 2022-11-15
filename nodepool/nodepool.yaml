@@ -24,47 +24,6 @@ labels:
     min-ready: 0
 
 providers:
-  - name: openstack-legacy
-    cloud: openstack-legacy
-    clean-floating-ips: true
-    image-name-format: "{image_name}-{timestamp}"
-    boot-timeout: 120
-    rate: 10.0
-    diskimages:
-      - name: img-debian-10
-        config-drive: true
-    pools:
-      - name: os-pool-m1s
-        max-servers: 0
-        networks:
-          - wazo-production-sf-net
-        labels:
-          - name: vm-debian-10-m1s
-            flavor-name: m1.small
-            diskimage: img-debian-10
-        availability-zones:
-          - nova
-      - name: os-pool-m2s
-        max-servers: 0
-        networks:
-          - wazo-production-sf-net
-        labels:
-          - name: vm-debian-10-m2s
-            flavor-name: m2.small
-            diskimage: img-debian-10
-        availability-zones:
-          - nova
-      - name: os-pool-m1m
-        max-servers: 0
-        networks:
-          - wazo-production-sf-net
-        labels:
-          - name: vm-debian-10-m1m
-            flavor-name: m1.medium
-            diskimage: img-debian-10
-        availability-zones:
-          - nova
-  # openstack2 provider config
   - name: openstack2
     cloud: openstack2
     clean-floating-ips: true
