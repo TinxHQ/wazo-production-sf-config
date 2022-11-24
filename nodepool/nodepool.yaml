@@ -40,7 +40,7 @@ providers:
           - wazo-production-sf-net
         labels:
           - name: vm-debian-10-m1s
-            flavor-name: m1.small
+            flavor-name: wazo-sf-worker-small
             diskimage: img-debian-10
         availability-zones:
           - nova
