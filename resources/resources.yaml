@@ -193,10 +193,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-cherrypy3-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-email-validator-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-fastapi-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-classful-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-graphql-packaging:
@@ -223,13 +219,9 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-marshmallow-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-multipart-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-portend-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-promise-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-pydantic-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pyfcm-packaging:
             zuul/exclude-unprotected-branches: true
@@ -241,15 +233,9 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-sqlalchemy-continuum-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-starlette-exporter-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-starlette-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-swaggerpy-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-tempora-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-uvicorn-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-werkzeug-packaging:
             zuul/exclude-unprotected-branches: true
