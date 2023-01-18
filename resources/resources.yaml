@@ -189,8 +189,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-asterisk-ari-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-asynqp-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-cherrypy3-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-classful-packaging:
