@@ -35,8 +35,6 @@ labels:
     min-ready: 0
   - name: vm-debian-10-m1m
     min-ready: 0
-  - name: pod-debian-11
-    min-ready: 2
 
 providers:
   - name: openstack2
@@ -57,9 +55,6 @@ providers:
           - wazo-production-sf-net
         labels:
           - name: vm-debian-11-m1s
-            flavor-name: wazo-sf-worker-small
-            diskimage: img-debian-11
-          - name: pod-debian-11
             flavor-name: wazo-sf-worker-small
             diskimage: img-debian-11
         availability-zones:
