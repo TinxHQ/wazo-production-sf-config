@@ -3,16 +3,13 @@ FROM debian:11
 # Zuul minimal package
 RUN apt-get update && \
     apt-get install -y \
-    black \
     git \
     iproute2 \
     python3-apt \
-    python3-bashate \
-    python3-doc8 \
-    python3-flake8 \
     python3-pip \
     python3-setuptools \
     python3-virtualenv \
+    python3-venv \
     rsync \
     sudo \
     traceroute \
