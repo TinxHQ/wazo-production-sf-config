@@ -2,6 +2,7 @@
 ---
 labels:
   - name: pod-debian-10
+  - name: pod-debian-11
   - name: pod-node-12
   - name: pod-python-310
 
@@ -12,6 +13,12 @@ extra-labels:
     labels:
       - name: pod-debian-10
         image: localhost/k1s/debian-10
+        python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-06a744820e8f3958e
+    pool: main
+    labels:
+      - name: pod-debian-11
+        image: localhost/k1s/debian-11
         python-path: /usr/bin/python3
   - provider: managed-k1s-provider-i-06a744820e8f3958e
     pool: main
@@ -31,6 +38,12 @@ extra-labels:
     labels:
       - name: pod-debian-10
         image: localhost/k1s/debian-10
+        python-path: /usr/bin/python3
+  - provider: managed-k1s-provider-i-0b2a96e1dcbad6fa7
+    pool: main
+    labels:
+      - name: pod-debian-11
+        image: localhost/k1s/debian-11
         python-path: /usr/bin/python3
   - provider: managed-k1s-provider-i-0b2a96e1dcbad6fa7
     pool: main
