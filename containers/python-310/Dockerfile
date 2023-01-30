@@ -2,7 +2,15 @@ FROM python:3.10-slim-bullseye
 
 # Zuul minimal package
 RUN apt-get update && \
-    apt-get install -y sudo rsync git traceroute iproute2
+    apt-get install -y  \
+      # base packages for Zuul
+      sudo \
+      rsync \
+      git \
+      traceroute \
+      iproute2 \
+      # Required for bindep in tox ansible job
+      python3-apt
 
 # Zuul uses revoke-sudo. We can simulate that by moving the default sudoers to zuul
 # And this will prevent root from using sudo when the file is removed by revoke-sudo
