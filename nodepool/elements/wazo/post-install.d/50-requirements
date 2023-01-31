@@ -2,6 +2,7 @@
 
 apt-get update
 
+# python3-apt is required for bindep in tox ansible job
 apt-get install -y \
     ansible \
     cron \
@@ -12,7 +13,7 @@ apt-get install -y \
     lintian \
     lsof \
     make \
-    python3-apt \  # required for bindep in tox ansible job
+    python3-apt \
     python3-dev \
     python3-pip \
     python3-venv \
