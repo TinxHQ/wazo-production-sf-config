@@ -11,8 +11,6 @@ apt-get install -y \
     apparmor \
     apparmor-utils
 
-
-
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 echo \
@@ -22,6 +20,8 @@ echo \
 apt-get update
 
 apt-get install -y docker-ce=5:20.* docker-ce-cli=5:20.* containerd.io
+
+aa-complain /etc/apparmor.d/*
 
 systemctl enable docker
 
