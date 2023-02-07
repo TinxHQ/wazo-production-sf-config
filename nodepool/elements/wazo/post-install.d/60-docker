@@ -21,8 +21,6 @@ apt-get update
 
 apt-get install -y docker-ce docker-ce-cli containerd.io
 
-aa-complain /etc/apparmor.d/*
-
 systemctl enable docker
 
 DOCKER_COMPOSE_VERSION='v2.2.3'
