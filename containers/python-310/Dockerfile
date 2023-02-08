@@ -10,7 +10,8 @@ RUN apt-get update && \
       traceroute \
       iproute2 \
       # Required for bindep in tox ansible job
-      python3-apt
+      python3-apt \
+      python3-setuptools
 
 # Zuul uses revoke-sudo. We can simulate that by moving the default sudoers to zuul
 # And this will prevent root from using sudo when the file is removed by revoke-sudo
