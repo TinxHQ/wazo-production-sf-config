@@ -31,7 +31,7 @@ extra-labels:
     labels:
       - name: pod-python-310
         image: localhost/k1s/python-310
-        python-path: /usr/local/bin/python3.10
+        python-path: /usr/local/bin/python3.9
   
   - provider: managed-k1s-provider-i-0b2a96e1dcbad6fa7
     pool: main
@@ -56,6 +56,6 @@ extra-labels:
     labels:
       - name: pod-python-310
         image: localhost/k1s/python-310
-        python-path: /usr/local/bin/python3.10
+        python-path: /usr/local/bin/python3.9
   
 
