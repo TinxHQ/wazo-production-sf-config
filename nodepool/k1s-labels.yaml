@@ -31,7 +31,9 @@ extra-labels:
     labels:
       - name: pod-python-310
         image: localhost/k1s/python-310
-        python-path: /usr/local/bin/python3.9
+        # Despite this being a Python 3.10 image we need to use the system's
+        # interpreter for Ansible so system packages function correctly
+        python-path: /usr/bin/python3.9
   
   - provider: managed-k1s-provider-i-0b2a96e1dcbad6fa7
     pool: main
@@ -56,6 +58,8 @@ extra-labels:
     labels:
       - name: pod-python-310
         image: localhost/k1s/python-310
-        python-path: /usr/local/bin/python3.9
+        # Despite this being a Python 3.10 image we need to use the system's
+        # interpreter for Ansible so system packages function correctly
+        python-path: /usr/bin/python3.9
   
 
