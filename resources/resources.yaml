@@ -205,7 +205,7 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-graphql-relay-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-graphql-server-core-packaging:
+        - wazo-platform/wazo-python-graphql-server-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-hstspreload-packaging:
             zuul/exclude-unprotected-branches: true
