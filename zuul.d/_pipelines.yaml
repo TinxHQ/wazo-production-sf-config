@@ -63,7 +63,7 @@
           state: approved
         - event: pull_request
           action: comment
-          comment: (?i)^\s*regate\s*$
+          comment: (?i)^\s*regate
         - event: pull_request_review
           action: dismissed
           state: request_changes
@@ -167,7 +167,7 @@
       github.com:
         - event: pull_request
           action: comment
-          comment: (?i)^\s*check experimental\s*$
+          comment: (?i)^\s*check experimental
     success:
       github.com: {}
     failure:
