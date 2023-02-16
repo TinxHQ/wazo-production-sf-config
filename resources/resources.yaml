@@ -145,8 +145,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-js-sdk:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-kamailio-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-keyring:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-lib-rest-client:
@@ -158,8 +156,6 @@ resources:
         - wazo-platform/wazo-libtestlink:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-market-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-ngcp-rtpengine-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-nginx:
             zuul/exclude-unprotected-branches: true
