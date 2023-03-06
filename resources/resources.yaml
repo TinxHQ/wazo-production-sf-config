@@ -191,8 +191,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-classful-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-flask-graphql-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-menu-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-session-packaging:
@@ -219,15 +217,11 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-prometheus-flask-exporter-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-promise-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pyfcm-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pystun3-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-rfc3986-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-rx-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-sqlalchemy-continuum-packaging:
             zuul/exclude-unprotected-branches: true
