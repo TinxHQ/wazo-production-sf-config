@@ -119,8 +119,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-consul-config:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-consul-template-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dbms:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-debug:
@@ -183,8 +181,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-purge-db:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-amqp-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-asterisk-ari-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-cherrypy3-packaging:
@@ -203,35 +199,17 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-graphql-server-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-hstspreload-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-httpx-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-jaraco.functools-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-kombu-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-marshmallow-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-portend-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-prometheus-flask-exporter-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pyfcm-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pystun3-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-rfc3986-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-sqlalchemy-continuum-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-starlette-exporter-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-swaggerpy-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-tempora-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-werkzeug-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-amqp:
             zuul/exclude-unprotected-branches: true
