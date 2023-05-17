@@ -51,7 +51,7 @@
             type: approved
         # Require label
         label: mergeit
-        status: "wazo-community-zuul[bot]:local/check:success"
+        status: "(?i)^wazo-community-zuul.*:local/check:success$"
         open: True
         current-patchset: True
     trigger:
@@ -61,13 +61,13 @@
           state: approved
         - event: pull_request
           action: comment
-          comment: (?i)^\s*regate\s*$
+          comment: (?i)^\s*regate
         - event: pull_request_review
           action: dismissed
           state: request_changes
         - event: pull_request
           action: status
-          status: "wazo-community-zuul[bot]:local/check:success"
+          status: "(?i)^wazo-community-zuul.*:local/check:success$"
         - event: pull_request
           action: labeled
           label:
@@ -165,7 +165,7 @@
       github.com:
         - event: pull_request
           action: comment
-          comment: (?i)^\s*check experimental\s*$
+          comment: (?i)^\s*check experimental
     success:
       github.com: {}
     failure:
