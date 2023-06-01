@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- encoding: utf-8 -*-
 
 import argparse
 import getpass
@@ -65,10 +64,10 @@ def main():
         if repo.archived:
             continue
 
-        print("Doing %s" % repo.full_name)
+        print(f"Doing {repo.full_name}")
 
         if repo.full_name not in ZUUL_PROJECTS:
-            f.write("        - %s:\n" % repo.full_name)
+            f.write(f"        - {repo.full_name}:\n")
             f.write("            zuul/exclude-unprotected-branches: true\n")
 
         if args.doit:
