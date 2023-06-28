@@ -23,13 +23,4 @@ apt-get install -y \
 
 pip3 install tox
 
-# tox --> virtual --> importlib_metadata (latest)
-# Latest version (>5.0.0) is incompatible with kombu used in production (4.6.11)
-# Since this host is use to execute wazo-ansible playbooks (i.e. install a
-# wazo), we should use same version than debian to avoid conflict.
-# However, since latest tox version is only compatible with
-# importlib-metadata>=4.8.3, using <5.0.0 should be good enough for both usage.
-# This fix should be removable on next debian version (Bullseye)
-pip3 install 'importlib_metadata<5.0.0'
-
 systemctl enable cron
