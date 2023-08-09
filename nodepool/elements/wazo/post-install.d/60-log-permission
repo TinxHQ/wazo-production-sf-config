@@ -1,0 +1,3 @@
+#!/bin/sh -ex
+
+usermod --append --groups adm zuul-worker
