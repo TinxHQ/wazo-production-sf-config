@@ -47,8 +47,10 @@
       github.com:
         review:
           # Require an approval from user with write access (e.g. core-reviewer)
-          - permission: write
-            type: approved
+          # - permission: write
+          #   type: approved
+          # Require any approval - useful for auto-merge pipeline
+          - type: approved
         # Require label
         label: mergeit
         status: "(?i)^wazo-community-zuul.*:local/check:success$"
