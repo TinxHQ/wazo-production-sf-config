@@ -247,6 +247,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-tester:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-tools:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ui:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-upgrade:
