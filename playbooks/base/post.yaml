@@ -20,11 +20,6 @@
     - role: add-fileserver
       fileserver: "{{ site_sflogs }}"
     - role: generate-zuul-manifest
-    - role: ara-report
-      # This depends-on https://review.openstack.org/577675
-      ara_report_run: True
-      ara_report_type: database
-      ara_report_path: "{{ zuul.executor.log_root }}/ara-report"
 
 - hosts: "zuul.wazo.community"
   gather_facts: false
@@ -37,4 +32,3 @@
         zuul_log_compress: true
         zuul_log_url: "https://zuul.wazo.community/logs"
         zuul_logserver_root: "{{ site_sflogs.path }}"
-
