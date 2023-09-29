@@ -19,7 +19,7 @@
     nodeset:
       nodes:
         - name: pod-debian-11
-          label: pod-debian-11
+          label: pod-centos-7
 
 - semaphore:
     name: semaphore-config-update
