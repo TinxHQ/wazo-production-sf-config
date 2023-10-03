@@ -36,7 +36,7 @@ labels:
   - name: vm-debian-10-m1m
     min-ready: 0
   - name: vm-debian-11-m1m
-    min-ready: 0
+    min-ready: 1
 
 providers:
   - name: openstack2
