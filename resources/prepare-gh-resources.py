@@ -32,7 +32,7 @@ resources:
 """
 HARDCODED_PROJECTS = """
 # Avoid to break jobs defined in sf-jobs, while waiting to wipe C4
-        - wazo-platform/wazo-c4
+        - wazo-platform/wazo-c4:
             zuul/exclude-unprotected-branches: true
 """
 
