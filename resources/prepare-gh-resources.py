@@ -19,10 +19,11 @@ resources:
     config-ptl:
       description: Team lead for the config repo
       members:
-        - admin@zuul.wazo.community
+        - infra+wazo-production-sf@wazo.io
     config-core:
       description: Team core for the config repo
-      members: []
+      members:
+        - dev+wazo-production-sf@wazo.io
   projects:
     wazo-platform:
       description: "Wazo Platform"
