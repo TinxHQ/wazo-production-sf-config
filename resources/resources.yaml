@@ -25,35 +25,57 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-metadata:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/ari-py:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/asterisk:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-debug:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-moh-opsound:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-vanilla:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/asterisk:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/chan-test:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/cluecon-2022:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/debian-installer:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/debian-pxelinux:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/debian-repo-archive:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/debian-repo-main:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/denv:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/kvm:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libconsul-c:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/libpri:
+        - wazo-platform/mockserver-client-python:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/pylinphonelib:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/python-service-template:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/react-native-firebase:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/rn-simple-webrtc:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-acceptance:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-agentd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agentd-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-agentd:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-agid:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-amid-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-amid:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-amid-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ansible:
             zuul/exclude-unprotected-branches: true
@@ -65,33 +87,27 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-asterisk-extra-modules:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-auth:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-auth-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-auth-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth-keys:
+        - wazo-platform/wazo-auth-example-backend:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-auth:
+        - wazo-platform/wazo-auth-keys:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-backup:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-ansible:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-c4-carrier:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-c4-router:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-c4-sbc:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-c4:
+        - wazo-platform/wazo-call-logd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-call-logd:
+        - wazo-platform/wazo-calld:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-calld-client:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-calld:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-chatd:
             zuul/exclude-unprotected-branches: true
@@ -99,17 +115,15 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-codec-opus-open-source:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-confd:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confd-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-confgend-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-confgend:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-consul-config:
+        - wazo-platform/wazo-confgend-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dbms:
             zuul/exclude-unprotected-branches: true
@@ -117,17 +131,19 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dev-ssh-pubkeys:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dird-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dird:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-dist-upgrade:
+        - wazo-platform/wazo-dird-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dist:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dist-upgrade:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-docker:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dummy-package:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-dummy-plugin:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-dxtora:
             zuul/exclude-unprotected-branches: true
@@ -135,7 +151,11 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-export-import:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-git-hooks:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-js-sdk:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-js-sdk-vitejs-example:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-keyring:
             zuul/exclude-unprotected-branches: true
@@ -145,13 +165,21 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libsrtp-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-libtestlink:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-load-stack:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-maintenance-mode:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-market:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-market-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-mobile-demo:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-nginx:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-notebook:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-openapi-generator:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-phoned:
             zuul/exclude-unprotected-branches: true
@@ -159,19 +187,21 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-platform.org:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-plugind:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-plugind-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-plugind-client:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-plugind:
+        - wazo-platform/wazo-prometheus-exporter-plugin:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-provd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-plugins:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-provd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-purge-db:
             zuul/exclude-unprotected-branches: true
@@ -205,43 +235,43 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-swaggerpy-packaging:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-react-native-demo:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-amqp:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-res-consul:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-consul-discovery:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-consul-stasis-app:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-res-consul:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-stasis-amqp:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-router-call-logd:
+        - wazo-platform/wazo-scalability:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-router-calld:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-router-confd:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-rtpe-config:
+        - wazo-platform/wazo-sdk:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-service:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-setupd-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-setupd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-sdk:
+        - wazo-platform/wazo-setupd-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sounds:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-sysconfd-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sysconfd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-tester:
+        - wazo-platform/wazo-sysconfd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-terraform:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-test-helpers:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-tools:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-turn-example:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-ui:
             zuul/exclude-unprotected-branches: true
@@ -249,17 +279,23 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-uuid:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-webhookd-client:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-webhookd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-websocketd-client:
+        - wazo-platform/wazo-webhookd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-webrtc-demo:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-websocketd:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/xgong:
+        - wazo-platform/wazo-websocketd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wpep:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-acceptance-server:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-benchmark:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-build-tools:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-bus:
             zuul/exclude-unprotected-branches: true
@@ -275,6 +311,10 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-lib-python:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-load-monitor:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/xivo-load-tester:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-manage-db:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-monitoring:
@@ -287,7 +327,7 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-sync:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-test-helpers:
+        - wazo-platform/xivo-upgrade:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-utils:
             zuul/exclude-unprotected-branches: true
