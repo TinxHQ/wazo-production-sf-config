@@ -30,6 +30,11 @@ resources:
       connection: github.com
       source-repositories:
 """
+HARDCODED_PROJECTS = """
+# Avoid to break jobs defined in sf-jobs, while waiting to wipe C4
+        - wazo-platform/wazo-c4
+            zuul/exclude-unprotected-branches: true
+"""
 
 ZUUL_PROJECTS = ["TinxHQ/wazo-production-sf-config", "TinxHQ/wazo-production-sf-jobs"]
 
@@ -102,6 +107,7 @@ def main():
             else:
                 label.edit("mergeit", "00FF7F")
 
+    f.write(HARDCODED_PROJECTS)
     f.close()
 
 
