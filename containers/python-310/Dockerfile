@@ -9,6 +9,8 @@ RUN apt-get update && \
       git \
       traceroute \
       iproute2 \
+      # required for compiling some packages \
+      gcc \
       # Required for bindep in tox ansible job
       python3-apt \
       python3-setuptools
