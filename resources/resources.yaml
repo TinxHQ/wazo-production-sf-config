@@ -49,6 +49,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/denv:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/getStats:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/kvm:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libconsul-c:
