@@ -209,6 +209,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-cherrypy3-packaging:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-python-consul-packaging:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-classful-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-menu-packaging:
@@ -318,8 +320,6 @@ resources:
         - wazo-platform/xivo-manage-db:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-monitoring:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-python-consul-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-res-freeze-check:
             zuul/exclude-unprotected-branches: true
