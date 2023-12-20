@@ -111,6 +111,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-calld-client:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-certs:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-chatd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-chatd-client:
@@ -302,8 +304,6 @@ resources:
         - wazo-platform/xivo-build-tools:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-bus:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-certs:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-ci:
             zuul/exclude-unprotected-branches: true
