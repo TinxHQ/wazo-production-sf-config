@@ -273,6 +273,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-sync:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sysconfd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sysconfd-client:
@@ -326,8 +328,6 @@ resources:
         - wazo-platform/xivo-res-freeze-check:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-swagger-doc:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-sync:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-upgrade:
             zuul/exclude-unprotected-branches: true
