@@ -103,6 +103,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-backup:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-bus:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-c4-ansible:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd:
@@ -308,8 +310,6 @@ resources:
         - wazo-platform/xivo-benchmark:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-build-tools:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-bus:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-config:
             zuul/exclude-unprotected-branches: true
