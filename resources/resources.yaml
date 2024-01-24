@@ -105,8 +105,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-bus:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-c4-ansible:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-call-logd-client:
