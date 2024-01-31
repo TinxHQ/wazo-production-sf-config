@@ -30,11 +30,8 @@ resources:
       connection: github.com
       source-repositories:
 """
-HARDCODED_PROJECTS = """
-# Avoid to break jobs defined in sf-jobs, while waiting to wipe C4
-        - wazo-platform/wazo-c4:
-            zuul/exclude-unprotected-branches: true
-"""
+
+IGNORED_PROJECTS = ["wazo-platform/wazo-c4-ansible"]
 
 ZUUL_PROJECTS = ["TinxHQ/wazo-production-sf-config", "TinxHQ/wazo-production-sf-jobs"]
 
@@ -68,6 +65,10 @@ def main():
     org = g.get_organization("wazo-platform")
     for repo in org.get_repos(sort='full_name'):
         if repo.archived:
+            continue
+
+        if repo.full_name in IGNORED_PROJECTS:
+            print(f"Ignoring {repo.full_name}")
             continue
 
         print(f"Doing {repo.full_name}")
@@ -107,7 +108,6 @@ def main():
             else:
                 label.edit("mergeit", "00FF7F")
 
-    f.write(HARDCODED_PROJECTS)
     f.close()
 
 
