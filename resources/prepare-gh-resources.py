@@ -32,6 +32,7 @@ resources:
 """
 
 IGNORED_PROJECTS = ["wazo-platform/wazo-c4-ansible"]
+IGNORED_BRANCHES = {"wazo-platform/wazo-provd-plugins": ["python2"]}
 
 ZUUL_PROJECTS = ["TinxHQ/wazo-production-sf-config", "TinxHQ/wazo-production-sf-jobs"]
 
@@ -76,6 +77,12 @@ def main():
         if repo.full_name not in ZUUL_PROJECTS:
             f.write(f"        - {repo.full_name}:\n")
             f.write("            zuul/exclude-unprotected-branches: true\n")
+
+            if repo.full_name in IGNORED_BRANCHES:
+                branches = IGNORED_BRANCHES[repo.full_name]
+                f.write("            zuul/exclude-branches:\n")
+                for branch in branches:
+                    f.write(f"              - {branch}\n")
 
         if args.doit:
             if repo.full_name in ZUUL_PROJECTS:
