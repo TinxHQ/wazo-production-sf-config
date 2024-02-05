@@ -213,6 +213,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-plugins:
             zuul/exclude-unprotected-branches: true
+            zuul/exclude-branches:
+              - python2
         - wazo-platform/wazo-purge-db:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-asterisk-ari-packaging:
