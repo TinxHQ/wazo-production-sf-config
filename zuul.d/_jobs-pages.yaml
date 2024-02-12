@@ -21,4 +21,3 @@
     run: playbooks/pages/build.yaml
     vars:
       src_dir: /
-
