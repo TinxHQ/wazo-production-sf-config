@@ -1,4 +1,4 @@
-# Software Factory production configuration
+# Software Factory Production Configuration
 
 This is the configuration repository for our Software Factory instance
 
