@@ -19,19 +19,18 @@ echo \
 
 apt-get update
 
-apt-get install -y docker-ce docker-ce-cli containerd.io
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 systemctl enable docker
 
-DOCKER_COMPOSE_VERSION='v2.2.3'
-curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+# Compatibility until we migrate to docker compose (without hyphen) everywhere
+ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 
 # No service running in chroot
 # systemctl start docker
 # docker version
 
-docker-compose version
+docker compose version
 
 # Script must run after zuul-worker & wazo-debug users creation, hence named 60-
 usermod -a -G docker wazo-debug
