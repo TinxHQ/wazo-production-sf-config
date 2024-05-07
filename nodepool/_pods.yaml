@@ -16,3 +16,4 @@ extra-labels:
       - name: pod-centos-7
         image: localhost/k1s/centos-7
         python-path: /bin/python2
+
