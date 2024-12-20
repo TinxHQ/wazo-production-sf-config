@@ -327,8 +327,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-res-freeze-check:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/xivo-swagger-doc:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-upgrade:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/xivo-utils:
