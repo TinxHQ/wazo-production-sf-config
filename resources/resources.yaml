@@ -243,8 +243,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-pystun3-packaging:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-sqlalchemy-continuum-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-starlette-exporter-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-swaggerpy-packaging:
