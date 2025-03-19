@@ -175,6 +175,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-load-stack:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-load-tools:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-maintenance-mode:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-market:
@@ -258,8 +260,6 @@ resources:
         - wazo-platform/wazo-res-consul-stasis-app:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-res-stasis-amqp:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-scalability:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sdk:
             zuul/exclude-unprotected-branches: true
