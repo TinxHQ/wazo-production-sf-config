@@ -17,6 +17,8 @@
         - include_role: name=prepare-workspace
         - include_role: name=add-build-sshkey
       when: "ansible_connection != 'kubectl'"
+    - include_role: name=workaround-bindep
+      when: "ansible_os_family == 'Debian'"
     - block:
         - include_role: name=prepare-workspace-openshift
         - include_role: name=remove-zuul-sshkey
