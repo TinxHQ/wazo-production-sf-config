@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cat <<EOF >/etc/resolv.conf
+search node.production.wazo service.production.wazo zuul.wazo.community
+nameserver 8.8.8.8
+EOF
