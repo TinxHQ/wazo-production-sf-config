@@ -1,6 +1,15 @@
 # This file is managed by sfconfig, do not edit manually
 
 providers:
+  - name: managed-k1s-provider-i-041ca5fdc04ed5bdf
+    driver: openshiftpods
+    context: /k1s-i-041ca5fdc04ed5bdf/managed
+    max-pods: 2
+    pools:
+    - name: main
+      # Use extra-labels to configure labels
+      labels: []
+
   - name: managed-k1s-provider-i-05f0ac2ac6898b2d1.zuul.wazo.community
     driver: openshiftpods
     context: /k1s-i-05f0ac2ac6898b2d1-zuul-wazo-community/managed
