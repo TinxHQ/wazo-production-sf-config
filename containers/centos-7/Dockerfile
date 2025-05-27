@@ -14,6 +14,11 @@
 
 FROM quay.io/centos/centos:centos7
 
+# Not a maintainable fix, but sfconfig is stuck without it
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo; \
+      sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo; \
+      sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+      
 # Zuul minimal package
 RUN yum install -y sudo rsync git traceroute iproute python3-setuptools python3-pip rpm-build python3-rpm-macros
 
