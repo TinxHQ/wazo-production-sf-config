@@ -11,6 +11,12 @@ diskimages:
       - zuul-worker-user
       # Our own elements in this repository's /nodepool/elements folder
       - wazo
+    env-vars:
+      # Remove bullseye-backports, which is added by default on diskimage-builder <3.39.0-4
+      DIB_APT_SOURCES_CONF: |
+        default:deb http://deb.debian.org/debian bullseye main
+        updates:deb http://deb.debian.org/debian bullseye-updates main
+        security:deb http://security.debian.org/ bullseye-security main
     python-path: /usr/bin/python3
 
 labels:
