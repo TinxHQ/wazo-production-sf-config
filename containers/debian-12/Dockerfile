@@ -1,19 +1,19 @@
-FROM debian:12
-
+#FROM debian:12
+FROM 119948825560.dkr.ecr.eu-west-1.amazonaws.com/wazo-it-tools/zuul-debian:12
 # Zuul minimal package
-RUN apt-get update && \
-    apt-get install -y \
-    git \
-    iproute2 \
-    python3-apt \
-    python3-pip \
-    python3-setuptools \
-    python3-venv \
-    rsync \
-    sudo \
-    traceroute \
-    wget \
-    yamllint
+# RUN apt-get update && \
+#     apt-get install -y \
+#     git \
+#     iproute2 \
+#     python3-apt \
+#     python3-pip \
+#     python3-setuptools \
+#     python3-venv \
+#     rsync \
+#     sudo \
+#     traceroute \
+#     wget \
+#     yamllint
 
 # Zuul uses revoke-sudo. We can simulate that by moving the default sudoers to zuul
 # And this will prevent root from using sudo when the file is removed by revoke-sudo
