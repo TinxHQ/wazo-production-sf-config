@@ -21,6 +21,10 @@ apt-get install -y \
     tar \
     unzip
 
-pip3 install tox
+# Create global virtualenv to avoid conflict with apt packages
+python3 -m venv /opt/global-venv
+source /opt/global-venv/bin/activate
+pip install tox
+ln -s /opt/global-venv/bin/tox /usr/local/bin/tox
 
 systemctl enable cron
