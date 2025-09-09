@@ -21,10 +21,9 @@ apt-get install -y \
     tar \
     unzip
 
-# Create global virtualenv to avoid conflict with apt packages
-python3 -m venv /opt/global-venv
-. /opt/global-venv/bin/activate
+# Remove the EXTERNALLY-MANAGED file to let pip install packages globally
+export PYTHON_VERSION=$(echo "$(python --version)" | cut -d' ' -f2 | cut -d. -f1,2)
+rm -f "/usr/lib/python${PYTHON_VERSION}/EXTERNALLY-MANAGED"
 pip install tox
-ln -s /opt/global-venv/bin/tox /usr/local/bin/tox
 
 systemctl enable cron
