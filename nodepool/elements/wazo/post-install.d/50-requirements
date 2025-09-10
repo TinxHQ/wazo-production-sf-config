@@ -14,18 +14,24 @@ apt-get install -y \
     lintian \
     lsof \
     make \
-    pipx \
     python3-apt \
     python3-dev \
     python3-docker \
-    python3-pip \
     python3-venv \
     sed \
     tar \
     unzip
 
-# Bookworm use pipx 1.1 which doesn't have --global flag
-# For Trixie, 'pipx --global' can used instead of variables
-PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install tox
+
+# bullseye doesn't have pipx package
+if [ "$(lsb_release --short --codename)" = 'bullseye' ]; then
+    apt-get install -y python3-pip
+    pip install tox
+else
+    apt-get install -y pipx
+    # Bookworm use pipx 1.1 which doesn't have --global flag
+    # For Trixie, 'pipx --global' can be used instead of variables
+    PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install tox
+fi
 
 systemctl enable cron
