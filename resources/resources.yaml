@@ -171,8 +171,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libsccp:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-libsrtp-packaging:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-load-stack:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-load-tools:
@@ -220,8 +218,6 @@ resources:
         - wazo-platform/wazo-purge-db:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-asterisk-ari-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-cherrypy3-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-consul-packaging:
             zuul/exclude-unprotected-branches: true
