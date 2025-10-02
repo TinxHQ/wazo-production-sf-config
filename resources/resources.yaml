@@ -268,11 +268,7 @@ resources:
         - wazo-platform/wazo-sounds:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
-            zuul/exclude-unprotected-branches: false
-            zuul/include-branches:
-                - master
-                - bookworm
-                - deleteme
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sync:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sysconfd:
