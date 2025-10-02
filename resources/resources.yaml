@@ -268,7 +268,6 @@ resources:
         - wazo-platform/wazo-sounds:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
-            zuul/exclude-unprotected-branches: true
             zuul/include-branches:
                 - master
                 - bookworm
