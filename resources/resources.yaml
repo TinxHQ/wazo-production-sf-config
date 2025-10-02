@@ -269,6 +269,9 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-stat:
             zuul/exclude-unprotected-branches: true
+            zuul/include-branches:
+                - master
+                - bookworm
         - wazo-platform/wazo-sync:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-sysconfd:
