@@ -19,6 +19,8 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
+        - wazo-platform/.github:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-consul-service:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-coturn:
@@ -34,6 +36,8 @@ resources:
         - wazo-platform/asterisk-moh-opsound:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/asterisk-vanilla:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/babel-plugin-react-native-stylename-to-style:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/chan-test:
             zuul/exclude-unprotected-branches: true
@@ -62,8 +66,6 @@ resources:
         - wazo-platform/python-service-template:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/react-native-firebase:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/rn-simple-webrtc:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-acceptance:
             zuul/exclude-unprotected-branches: true
@@ -298,6 +300,8 @@ resources:
         - wazo-platform/wazo-websocketd:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-websocketd-client:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/webrtc-test-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wpep:
             zuul/exclude-unprotected-branches: true
