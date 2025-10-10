@@ -97,7 +97,7 @@ def main():
 
             branch = repo.get_branch("master")
             if zuul_configured:
-                contexts = ["local/check"]
+                contexts = ["local/wazo-check"]
             else:
                 contexts = []
 
