@@ -20,33 +20,32 @@ labels:
     min-ready: 1
 
 providers:
-  - name: openstack2
-    cloud: openstack2
-    clean-floating-ips: true
-    image-name-format: "{image_name}-{timestamp}"
-    boot-timeout: 120
-    rate: 10.0
+  - name: ec2-eu-west-1
+    driver: aws
+    region-name: eu-west-1
+    object-storage:
+       bucket-name: wazo-software-factory-disk-images
     diskimages:
       - name: img-debian-12
-        config-drive: true
+        username: zuul-worker
+        connection-port: 22
+        volume-size: 40
     pools:
-      - name: os-pool-m1s-bookworm
+      - name: m1m-bookworm
         max-servers: 5
-        networks:
-          - provider
-        labels:
-          - name: vm-debian-12-m1s
-            flavor-name: wazo-sf-worker-small
-            diskimage: img-debian-12
-        availability-zones:
-          - nova
-      - name: os-pool-m1m-bookworm
-        max-servers: 5
-        networks:
-          - provider
+        subnet-id: subnet-0cda0d5056f892394 # eu-west-1 IT subnet
+        security-group-id: sg-0fc30744a6f419196 # Specific security group for Zuul workers
         labels:
           - name: vm-debian-12-m1m
-            flavor-name: m1.medium
             diskimage: img-debian-12
-        availability-zones:
-          - nova
+            instance-type: t3.medium
+            key-name: nodepool
+      - name: m1s-bookworm
+        max-servers: 5
+        subnet-id: subnet-0cda0d5056f892394 # eu-west-1 IT subnet
+        security-group-id: sg-0fc30744a6f419196 # Specific security group for Zuul workers
+        labels:
+          - name: vm-debian-12-m1s
+            diskimage: img-debian-12
+            instance-type: t3.small
+            key-name: nodepool
