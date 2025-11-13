@@ -32,7 +32,10 @@ resources:
 """
 
 IGNORED_PROJECTS = ["wazo-platform/wazo-c4-ansible"]
-IGNORED_BRANCHES = {"wazo-platform/wazo-provd-plugins": ["python2"]}
+IGNORED_BRANCHES = {
+    "wazo-platform/wazo-provd": ["provd-postgresql"],  # temporarily excluded while we wait to start again
+    "wazo-platform/wazo-provd-plugins": ["python2"],
+}
 
 ZUUL_PROJECTS = ["TinxHQ/wazo-production-sf-config", "TinxHQ/wazo-production-sf-jobs"]
 

@@ -41,8 +41,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/chan-test:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/cluecon-2022:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-installer:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-pxelinux:
@@ -210,7 +208,7 @@ resources:
         - wazo-platform/wazo-provd:
             zuul/exclude-unprotected-branches: true
             zuul/exclude-branches:
-              - provd-postgresql  # temporarily excluded while we wait to start again
+              - provd-postgresql
         - wazo-platform/wazo-provd-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-client:
