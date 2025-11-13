@@ -209,6 +209,8 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd:
             zuul/exclude-unprotected-branches: true
+            zuul/exclude-branches:
+              - provd-postgresql  # temporarily excluded while we wait to start again
         - wazo-platform/wazo-provd-cli:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-provd-client:
