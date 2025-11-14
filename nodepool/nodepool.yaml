@@ -1,24 +1,6 @@
 ---
 # https://zuul-ci.org/docs/nodepool/configuration.html#attr-diskimages
 diskimages:
-  - name: img-debian-11
-    release: bullseye
-    # https://zuul-ci.org/docs/nodepool/configuration.html#attr-diskimages.elements
-    elements:
-      - debian
-      # Those live in /usr/share/sf-elements
-      - nodepool-minimal
-      - zuul-worker-user
-      # Our own elements in this repository's /nodepool/elements folder
-      - wazo
-    env-vars:
-      # Remove bullseye-backports, which is added by default on diskimage-builder <3.39.0-4
-      DIB_APT_SOURCES_CONF: |
-        default:deb http://deb.debian.org/debian bullseye main
-        updates:deb http://deb.debian.org/debian bullseye-updates main
-        security:deb http://security.debian.org/ bullseye-security main
-    python-path: /usr/bin/python3
-
   - name: img-debian-12
     release: bookworm
     # https://zuul-ci.org/docs/nodepool/configuration.html#attr-diskimages.elements
@@ -32,10 +14,6 @@ diskimages:
     python-path: /usr/bin/python3
 
 labels:
-  - name: vm-debian-11-m1s
-    min-ready: 2
-  - name: vm-debian-11-m1m
-    min-ready: 1
   - name: vm-debian-12-m1s
     min-ready: 2
   - name: vm-debian-12-m1m
@@ -49,31 +27,9 @@ providers:
     boot-timeout: 120
     rate: 10.0
     diskimages:
-      - name: img-debian-11
-        config-drive: true
       - name: img-debian-12
         config-drive: true
     pools:
-      - name: os-pool-m1s-bullseye
-        max-servers: 5
-        networks:
-          - provider
-        labels:
-          - name: vm-debian-11-m1s
-            flavor-name: wazo-sf-worker-small
-            diskimage: img-debian-11
-        availability-zones:
-          - nova
-      - name: os-pool-m1m-bullseye
-        max-servers: 5
-        networks:
-          - provider
-        labels:
-          - name: vm-debian-11-m1m
-            flavor-name: m1.medium
-            diskimage: img-debian-11
-        availability-zones:
-          - nova
       - name: os-pool-m1s-bookworm
         max-servers: 5
         networks:
