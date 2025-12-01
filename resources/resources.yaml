@@ -19,6 +19,8 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
+        - TinxHQ/zuul-test-job:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/.github:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-consul-service:
