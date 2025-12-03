@@ -1,0 +1,8 @@
+#!/bin/sh -ex
+
+cat > /etc/systemd/system/sshd.service.d/override.conf << EOF
+[Unit]
+After=network.target auditd.service systemd-user-sessions.service
+EOF
+
+systemctl daemon-reload
