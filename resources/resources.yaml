@@ -19,8 +19,6 @@ resources:
       description: "Wazo Platform"
       connection: github.com
       source-repositories:
-        - TinxHQ/zuul-test-job:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/.github:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-consul-service:
@@ -44,8 +42,6 @@ resources:
         - wazo-platform/chan-test:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-installer:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-pxelinux:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-repo-archive:
             zuul/exclude-unprotected-branches: true
@@ -230,12 +226,6 @@ resources:
         - wazo-platform/wazo-python-flask-menu-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-flask-session-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-graphene-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-graphql-core-packaging:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/wazo-python-graphql-relay-packaging:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-python-graphql-server-packaging:
             zuul/exclude-unprotected-branches: true
