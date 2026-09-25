@@ -21,6 +21,10 @@ resources:
       source-repositories:
         - wazo-platform/.github:
             zuul/exclude-unprotected-branches: true
+        - wazo-platform/ansible-collection-molecule:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/ansible-role-consul:
+            zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-consul-service:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/ansible-role-coturn:
@@ -41,8 +45,6 @@ resources:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/chan-test:
             zuul/exclude-unprotected-branches: true
-        - wazo-platform/debian-installer:
-            zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-repo-archive:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/debian-repo-main:
@@ -50,8 +52,6 @@ resources:
         - wazo-platform/denv:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/getStats:
-            zuul/exclude-unprotected-branches: true
-        - wazo-platform/kvm:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/libconsul-c:
             zuul/exclude-unprotected-branches: true
@@ -168,6 +168,8 @@ resources:
         - wazo-platform/wazo-lib-rest-client:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-libsccp:
+            zuul/exclude-unprotected-branches: true
+        - wazo-platform/wazo-load-k6:
             zuul/exclude-unprotected-branches: true
         - wazo-platform/wazo-load-stack:
             zuul/exclude-unprotected-branches: true
